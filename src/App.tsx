@@ -1,14 +1,12 @@
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import { Navigation } from './components/header';
 require('./App.scss');
 
-const Hello = (props: {name: string}) => {
+export const App = () => {
     return (
-        <h1 className="app"> Hello {props.name} </h1>
+        <div>
+            <Navigation />
+            <h1>Welcome</h1>
+        </div>
     );
 };
-
-ReactDOM.render(
-    <Hello name="World!!!" />,
-    document.getElementById('root'),
-);
