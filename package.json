@@ -2,10 +2,13 @@
     "name": "velopower",
     "version": "1.0.0",
     "description": "Velopower landing page",
+    "homepage": "https://bogdancojocariu.github.io/velopowerd",
     "scripts": {
         "build": "webpack --config webpack.config.js",
         "start": "webpack-dev-server",
-        "tslint": "tslint -c ./tslint.json --project ./tsconfig.json --type-check -e ./types/**/*.d.ts"
+        "tslint": "tslint -c ./tslint.json --project ./tsconfig.json --type-check -e ./types/**/*.d.ts",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build"
     },
     "dependencies": {
         "@types/react": "^16.0.41",
@@ -16,6 +19,7 @@
         "typescript": "^2.7.2"
     },
     "devDependencies": {
+        "gh-pages": "^1.1.0",
         "html-webpack-plugin": "^3.1.0",
         "ts-loader": "^4.1.0",
         "webpack": "^4.2.0",
