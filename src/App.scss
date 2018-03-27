@@ -1,19 +1,31 @@
-
+body {
+    font-family: 'Lato', sans-serif;
+}
 .app {
     color: blue;
 }
 
-.full-height-grid {
+.full-height {
     height: 100vh;
+    width: 100%;
+    padding: 100px 20px;
     display: table;
 }
 
-.page-content {
+.vcenter { 
     display: table-cell;
     vertical-align: middle;
 }
 
+.page-content {
+    display: inline-block;
+}
+
 .logo {
-    width: 500px;
+    width: 100%;
     border-radius: 50px;
+}
+
+.page-info {
+    text-align: justify;
 }

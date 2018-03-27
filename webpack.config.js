@@ -35,7 +35,7 @@ module.exports = {
           ]
       },
       {
-        test: /\.(jpe?g|png|gif)$/i,
+        test: /\.(jpe?g|png|gif|ico)$/i,
         loader: 'url-loader?limit=1000&name=images/[hash].[ext]'
       },
     ]
@@ -52,10 +52,11 @@ module.exports = {
         template: `${__dirname}/src/index.html`,
         filename: 'index.html',
         inject: 'body',
+        favicon: 'src/favicon-32x32.png',
     }),
     new MiniCssExtractPlugin({
         filename: "[name].css",
-        chunkFilename: "[id].css"
+        chunkFilename: "[id].css",
     })
   ],
   devServer: {

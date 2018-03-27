@@ -1,12 +1,16 @@
 import * as React from 'react';
 import { Navbar, Nav, NavItem } from 'react-bootstrap';
+import './header.scss';
+const logo = require('./resources/logo-alb.png');
 
 export const Navigation = () => {
     return (
         <Navbar inverse collapseOnSelect fixedTop>
             <Navbar.Header>
                 <Navbar.Brand>
-                    <a href="#brand">Velopower</a>
+                    <a href="#brand" className="navbar-link">
+                        <img src={logo} height="50px" />
+                    </a>
                 </Navbar.Brand>
                 <Navbar.Toggle />
             </Navbar.Header>

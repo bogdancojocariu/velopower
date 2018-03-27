@@ -34,19 +34,28 @@ const options = {
     title: {
         display: false,
     },
-    maintainAspectRatio: true,
+    legend: {
+        display: false,
+    },
+    maintainAspectRatio: false,
+    layout: {
+        padding: {
+            left: 0,
+            right: 0,
+            top: 20,
+            bottom: 0,
+        },
+    },
+    fullWidth: true,
 };
 
 export const LC = () => {
     return (
-        <div>
-            <h2>Line Example</h2>
+        <div className="chart-container">
             <Line
                 data={data}
                 options={options}
-                width={90}
-                height={50}
             />
-      </div>
+        </div>
     );
 }
