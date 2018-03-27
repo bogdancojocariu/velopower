@@ -3,7 +3,7 @@ import { Navbar, Nav, NavItem } from 'react-bootstrap';
 
 export const Navigation = () => {
     return (
-        <Navbar inverse collapseOnSelect>
+        <Navbar inverse collapseOnSelect fixedTop>
             <Navbar.Header>
                 <Navbar.Brand>
                     <a href="#brand">Velopower</a>

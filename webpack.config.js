@@ -8,32 +8,36 @@ module.exports = {
   devtool: 'inline-source-map',
   module: {
     rules: [
-        {
-            test: /\.tsx?$/,
-            use: 'ts-loader',
-            exclude: /node_modules/
-        },
-        {
-            test: /\.scss$/,
-            use: [
-              MiniCssExtractPlugin.loader,
-              "css-loader",
-              "postcss-loader",
-              "sass-loader"
-            ]
-        },
-        {
-            test: /\.css$/,
-            use: [
-              {
-                loader: 'css-loader',
-                options: {
-                  modules: true,
-                  localIdentName: '[path][name]__[local]--[hash:base64:5]'
-                }
+      {
+          test: /\.tsx?$/,
+          use: 'ts-loader',
+          exclude: /node_modules/
+      },
+      {
+          test: /\.scss$/,
+          use: [
+            MiniCssExtractPlugin.loader,
+            "css-loader",
+            "postcss-loader",
+            "sass-loader"
+          ]
+      },
+      {
+          test: /\.css$/,
+          use: [
+            {
+              loader: 'css-loader',
+              options: {
+                modules: true,
+                localIdentName: '[path][name]__[local]--[hash:base64:5]'
               }
-            ]
-        }
+            }
+          ]
+      },
+      {
+        test: /\.(jpe?g|png|gif)$/i,
+        loader: 'url-loader?limit=1000&name=images/[hash].[ext]'
+      },
     ]
   },
   resolve: {

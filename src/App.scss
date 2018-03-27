@@ -2,3 +2,18 @@
 .app {
     color: blue;
 }
+
+.full-height-grid {
+    height: 100vh;
+    display: table;
+}
+
+.page-content {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.logo {
+    width: 500px;
+    border-radius: 50px;
+}
